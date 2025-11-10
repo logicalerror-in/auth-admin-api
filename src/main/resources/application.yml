@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    default: dev
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+    org.hibernate.SQL: debug
