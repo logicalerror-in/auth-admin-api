@@ -17,12 +17,4 @@ public class AdminEntity extends SoftDeleteEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "nickname", nullable = false, unique = true)
-    private String nickname;
-
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "image")
-    private String image;
 }
