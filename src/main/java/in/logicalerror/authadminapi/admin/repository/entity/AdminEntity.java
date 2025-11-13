@@ -17,4 +17,5 @@ public class AdminEntity extends SoftDeleteEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
+    private String roles;
 }
