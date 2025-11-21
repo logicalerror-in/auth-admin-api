@@ -2,8 +2,13 @@ package in.logicalerror.authadminapi.admin.repository.entity;
 
 import in.logicalerror.authadminapi.admin.repository.entity.common.SoftDeleteEntity;
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Builder
 @Table(name = "admin")
 public class AdminEntity extends SoftDeleteEntity {
     @Id
@@ -17,12 +22,6 @@ public class AdminEntity extends SoftDeleteEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "nickname", nullable = false, unique = true)
-    private String nickname;
-
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "image")
-    private String image;
+    @Column(name = "roles", nullable = false)
+    private String roles;
 }
